@@ -1,0 +1,9 @@
+{
+    "useDatabase":true,
+    "hideToolbar":false,
+    "regionOntology":true,
+    "drawingEnabled":true,
+    "removeTools":["addpoint","addregion","delpoint", "delregion","splitregion", "rotate", "flip", "handle", "simplify", "copy", "paste"],
+    "multiImageSave":true,
+    "defaultStrokeColor": {"red": 0, "blue": 0, "green": 0, "alpha":0.5}
+}

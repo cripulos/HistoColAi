@@ -1,0 +1,259 @@
+<html>
+
+<head> 
+	<title>histocolai</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no" />
+	<link rel="stylesheet" href="css/histocolai.css" type="text/css" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+
+<div id="menuButton">
+	<img class="button" id="openMenu" title="Menu" src="img/openMenu.svg" />
+</div>
+
+<!-- Toolbar -->
+<div id="menuBar" class="table">
+
+	<div class="row">
+		<div id="login"></div>
+		<img class="button" id="closeMenu" title="Close menu" src="img/closeMenu.svg" />
+	</div>
+
+	<div class="row">
+		<div id="myNavigator"></div>
+	</div>
+
+	<div class="row">
+		<div class="cell" style="text-align:center">
+			<div class="buttonGroup">
+				<img class="button" id="Zoom"        title="Navegator"              src="img/navigate.svg" />
+				<img class="button" id="Home"        title="Home"                   src="img/home.svg" />
+				<img class="button" id="Zoomin"     title="Zoom in"                src="img/plus.svg" />
+				<img class="button" id="Zoomout"    title="Zoom out"               src="img/minus.svg" />
+				<div>
+					<input id="slice-name-text" list="slice-names-text" style="width:100%; font-size: small; margin: 5px 0px; left: -5px; text-align: center;" readonly="true"/>
+					<input id="slice-name-text-leti" list="slice-names-text" style="width:100%; font-size: small; margin: 5px 0px; left: -5px; text-align: center;"/>
+				</div>
+				<div style="font-size: small; font-weight: 300;">
+					<input id="annotation-ended" list="annotation-ended" type="checkbox" style="margin: 5px 0px; left: -5px;"/>&nbsp;Finished annotation
+				</div>
+				<div>
+					<img class="button" id="prev"    title="Previous image"         src="img/prev.svg" />
+					<input id="slice-name" list="slice-names" style="width:80px; text-align: center;" />
+					<img class="button" id="next"    title="Next image"             src="img/next.svg" />
+				</div>
+				<input type="range" id="slider" />
+			</div>
+			<div class="buttonGroup">
+				<img class="button" id="select"       title="Select"                 src="img/select.svg" />
+				<img class="button" id="draw"         title="Draw"       src="img/draw.svg" />
+				<img class="button" id="draw-polygon" title="Draw polygon"           src="img/draw-polygon.svg" />
+				<img class="button" id="simplify"     title="Simplificar"               src="img/simplify.svg" />
+				<img class="button" id="addpoint"     title="Add point"              src="img/addPoint.svg" />
+				<img class="button" id="delpoint"     title="Delete point"           src="img/deletePoint.svg" />
+				<img class="button" id="addregion"    title="Union of regions"       src="img/union.svg" />
+				<img class="button" id="delregion"    title="Subtraction of regions" src="img/subtract.svg" />
+				<img class="button" id="splitregion"  title="Split region"           src="img/subtract.svg" />
+				<img class="button" id="rotate"       title="Rotate region"          src="img/rotate.svg" />
+				<img class="button" id="flip"         title="Flip region"            src="img/flip.svg" />
+                <img class="button" id="handle"       title="Toggle handles"          src="img/save.svg" />
+			</div>
+			<div class="buttonGroup">
+				<img class="button" id="save"        title="Save annotation"       src="img/save.svg" />
+				<img class="button" id="copy"	     title="Copiar region"		        src="img/copy.svg" />
+				<img class="button"	id="paste"	     title="Pegar región"		        src="img/paste.svg" />
+				<img class="button" id="delete"      title="Erase region"          src="img/delete.svg" />
+			</div>
+
+			<div >
+        <div id="glob_label">
+				  <br>Global label
+				  <input id="annotation-label" type="text" list=value name="label" >
+        </div>
+				<div hidden id="resident"> 
+
+					<select id="drop-down-label1"  name="dd-label" style="max-width:100px;">
+						<option value="" selected></option>>
+						</select>
+
+					<select id="confidence"  name="confidence1">
+						<option value="0" selected></option>>
+						<option value=10>10</option>
+						<option value=20>20</option>
+						<option value=30>30</option>
+						<option value=40>40</option>
+						<option value=50>50</option>
+						<option value=60>60</option>
+						<option value=70>70</option>
+						<option value=80>80</option>
+						<option value=90>90</option>
+						<option value=100>100</option>
+						</select>
+					%
+					
+					<div hidden id="resident2">
+						<br>
+						<select id="drop-down-label2"  name="dd-label2" style="max-width:100px;">
+							<option value="" selected></option>>
+							</select>
+						
+						<select id="confidence2"  name="confidence2">
+							<option value=0 selected>0</option>
+							</select>
+						%
+
+					</div>
+
+					<div hidden id="resident3">
+						<br>	
+						<select id="drop-down-label3"  name="dd-label3" style="max-width:100px;">
+							<option value="" selected></option>
+							</select>
+
+						<select id="confidence3"  name="confidence3">
+							<option value=0 selected>0</option>
+						</select>
+						%
+
+					</div>
+				</div> 
+				<br>
+				<input type="button" hidden id="sendConviction" value="Save" onClick="sendConviction();">
+				<br>
+				<br>
+				Observations<textarea id="annotation-observation" rows="3" cols="22" style="max-width:174px; max-height:181px;" ></textarea>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" id="copy_annotations_to" style="display: none;">
+		<div class="cell" style="text-align:center">
+			<div class="buttonGroup" style="border: 2px solid rgb(153, 0, 0); margin-top: 10px;">
+				<form action="copy_annotations_auto_to_user.php" method="POST" style="font-size: small; font-weight: 300;  margin-top: 10px;">
+					Copy annotations to:
+					<select name="sel_user" id="sel_user" style="font-size: small;">
+						<option value="0">Populating...</option>
+					</select>
+					<input type="hidden" id="slice_data" value="-1">
+					<input type="button" value="Copy" id="btn_copy_annotations_to" style="font-size: small;">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="cell ">
+			<br>
+			Regions
+			<br>
+			<div id="regionList"></div>
+		</div>
+	</div>
+</div>
+
+<div id="colorSelector">
+	Draw
+	<select id="selectStrokeColor" onChange="onSelectStrokeColor();">
+		<option value="0">Black</option>
+		<option value="1">White</option>
+		<option value="2">Red</option>
+		<option value="3">Green</option>
+		<option value="4">Blue</option>
+		<option value="5">Yellow</option>
+	</select>
+    <br>
+    <br>
+    Thickness
+    <input type="button" id="strokeWidthDec" value="-" onClick="onStrokeWidthDec();"><input type="button" id="strokeWidthInc" value="+" onClick="onStrokeWidthInc();">
+	<br>
+	<br>
+	Filler
+	<input type="color" id="fillColorPicker" value="#ff0000" onChange="onFillColorPicker(this.value);" >
+	<br>
+	<br>
+	&alpha;<input type="range" min="0" max="100" id="alphaSlider" onInput="onAlphaSlider(this.value);" ><input id="alphaFill" onInput="onAlphaInput(this.value);" >
+	<br>
+	<br>
+	<input type="button" id="okStrokeColor" value="ok" onClick="setRegionColor();">
+</div>
+
+<!-- Region Picker -->
+<div id="regionPicker">
+</div>
+
+<!-- OpenSeadragon viewer -->
+<div id="openseadragon1" style="width:100%">
+</div>
+
+<!-- alert/info box after saving -->
+<div id="saveDialog"></div>
+
+<!-- cvblab logo -->
+<a id="logo_cvblab" href="http://www.lableni.com/cvblab/">
+	<img src="img/cvblab.svg" style="width:5.5em" />
+</a>
+
+<!-- naat logo -->
+<a id="logo" href="http://neuroanatomy.github.io">
+	<img src="img/naat.svg" style="width:2.5em" />
+</a>
+
+
+<!-- Load javascript -->
+<!-- <script src="lib/paper-full-0.9.25.min.js"></script> -->
+<script src="lib/paper-full.js"></script>
+<script src="lib/openseadragon/openseadragon.js"></script>
+<script src="lib/openseadragon-viewerinputhook.min.js"></script>
+<script src="lib/OpenSeadragonScalebar/openseadragon-scalebar.js"></script>
+<script src="lib/jquery-1.11.0.min.js"></script>
+<script src="lib/FileSaver.js"></script>
+<script src="lib/easytimer/dist/easytimer.min.js"></script>>
+
+<!-- F180522: [INI] JS add "Copy to" user (only visible if user is "auto" -->
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$.ajax({
+			url: 'php/get_users.php',
+			type: 'post',
+			data: {o: 'get_list_of_users'},
+			dataType: 'json',
+			success:function(response){
+
+				var len = response.length;
+				$("#sel_user").empty();
+				for( var i = 0; i<len; i++){
+					$("#sel_user").append("<option value='"+response[i]['id']+"'>"+response[i]['name']+"</option>");
+				}
+			}
+		});
+	});
+
+</script>
+<!-- F180522: [END] JS add "Copy to" user (only visible if user is "auto" -->
+<script src="lib/mylogin/login.js"></script>
+
+<script src="neurolex-ontology.js"></script>
+<script src="base.js"></script>
+<script src="histocolai.js"></script>
+<script type="text/javascript">
+
+
+window.addEventListener("beforeunload", function (e) {
+  var confirmationMessage = "\o/";
+
+	if(!changesSaved) {
+  	e.returnValue = confirmationMessage;     
+  	return confirmationMessage;             
+	}
+});
+
+</script>
+
+</body>
+
+</html>
