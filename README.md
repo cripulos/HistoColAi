@@ -20,7 +20,7 @@ Steps to deploy in the local host the microdraw tool:
 
 9 in the root path  /xampp/htdocs/anotacion create a new folder "images".
 
-10 Go to https://gofile.me/4sVIM/YC5JQugTY and click on "Dercargar carpeta" to download a test batch.
+10 Go to https://gofile.me/4sVIM/1uQiIJ6h2 and click on "Dercargar carpeta" to download a test batch.
 
 11 Unzip the file and copy them in the folder "batch_spitzoid_proof" in the root path  /xampp/htdocs/anotacion/images.
 
