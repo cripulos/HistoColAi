@@ -18,15 +18,15 @@ Steps to deploy in the local host the microdraw tool:
 
 7 Import to microdraw the data from histocolai.sql locates in the repository.
 
-9 in the root path  /xampp/htdocs/anotacion create a new folder "images".
+9 in the root path  /xampp/htdocs/histocolai/images create a new folder "crowdsourcing".
 
 10 Go to https://gofile.me/4sVIM/1uQiIJ6h2 and click on "Dercargar carpeta" to download a test batch.
 
-11 Unzip the file and copy them in the folder "batch_spitzoid_proof" in the root path  /xampp/htdocs/anotacion/images.
+11 Unzip the file and copy them in the folder "crowdsourcing" in the root path  /xampp/htdocs/anotacion/images.
 
 12 Run the apache server from Xampp console.
 
-13 Visit https://localhost/anotacion/microdraw.html?source=images/batch_spitzoid_proof/dzi_images.json to enter in the application.
+13 Visit https://localhost/anotacion/histocolai.html?source=images/crowdsourcing/dzi_images.json to enter in the application.
 
 14 Login using user:test2 and password: test2.
 
