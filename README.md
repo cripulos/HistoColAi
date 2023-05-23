@@ -18,7 +18,7 @@ Steps to deploy in the local host the microdraw tool:
 
 7 Import to microdraw the data from histocolai.sql locates in the repository.
 
-9 in the root path  /xampp/htdocs/anotacion create a new folder "images"
+9 in the root path  /xampp/htdocs/anotacion create a new folder "images".
 
 10 Go to https://gofile.me/4sVIM/YC5JQugTY and click on "Dercargar carpeta" to download a test batch.
 
