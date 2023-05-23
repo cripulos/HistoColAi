@@ -26,7 +26,7 @@ Steps to deploy in the local host the microdraw tool:
 
 12 Run the apache server from Xampp console.
 
-13 Visit https://localhost/anotacion/histocolai.html?source=images/crowdsourcing/dzi_images.json to enter in the application.
+13 Visit https://localhost/histocolai/histocolai.html?source=images/crowdsourcing/dzi_images.json to enter in the application.
 
 14 Login using user:test2 and password: test2.
 
