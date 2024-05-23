@@ -1,1 +1,1 @@
-var localhost = "localhost/histocolai";
+var localhost = "http://localhost:41062/HistoColAi";

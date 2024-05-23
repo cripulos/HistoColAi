@@ -1,6 +1,6 @@
 <?php
 
-$rootdir = "/histocolai";
+$rootdir = "/HistoColAi";
 include $_SERVER['DOCUMENT_ROOT'].$rootdir."/php/base.php";
 $connection=mysqli_connect($dbhost,$dbuser,$dbpass,$dblogin) or die("ERROR: Can't connect to MySQL DB: " . mysql_error());
 
