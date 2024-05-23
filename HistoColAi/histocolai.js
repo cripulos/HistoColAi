@@ -1557,7 +1557,10 @@ function histocolaiDBLoad() {
 
 		// parse the data and add to the current canvas
 		if( debug ) console.log("[",data,"]");
-
+   
+     
+    console.log("*********************************************");
+    console.log(data)
 		obj = JSON.parse(data);
 		if( obj ) {
 

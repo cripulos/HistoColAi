@@ -1,12 +1,12 @@
 <?php
 
-$rootdir = "histocolai";
+$rootdir = "/HistoColAi";
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 include "base.php";
 
-$connection=mysqli_connect($dbhost, $dbuser, $dbpass,$dbname) or die("MySQL Error 1: " . mysql_error());
+$connection=mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("MySQL Error 1: " . mysql_error());
 
 // returns a json with the list of registered users
 function get_list_of_users()
@@ -17,6 +17,8 @@ function get_list_of_users()
 	// get a list of registered users
 	$q="SELECT `UserID`, `Username` FROM `Users`";
 	$result = mysqli_query($connection,$q);
+   
+     //echo $q;
     
     $user_list = array($result->num_rows);
     $i = 0;

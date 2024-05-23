@@ -1,11 +1,14 @@
 <?php
 
-$rootdir = "/histocolai";
+$rootdir = "/HistoColAi";
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
+//echo $_SERVER['DOCUMENT_ROOT'].$rootdir."/php/base.php";
+
 include $_SERVER['DOCUMENT_ROOT'].$rootdir."/php/base.php";
+
 $connection=mysqli_connect($dbhost, $dbuser, $dbpass,$dbname) or die("MySQL Error 1: " . mysql_error());
 
 if(isset($_GET["action"])) $action=$_GET;
@@ -122,6 +125,7 @@ function loadLast($args)
 		." myOrigin = '".$args["origin"]."' AND"
 		." myKey = '".$args["key"]."'"
 		." ORDER BY myTimestamp DESC LIMIT 1";
+  //echo $q ;
 	$result = mysqli_query($connection,$q);
 	if(mysqli_num_rows($result)>0) {
 		header('Content-Type: application/text');
