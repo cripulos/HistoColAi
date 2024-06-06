@@ -36,7 +36,7 @@ Enjoy.
 
 1 Download repo and go to the folder /image/ and unzip "batch_spitzoid_proof" wich can be dowload from https://upvedues-my.sharepoint.com/:u:/g/personal/cripulos_upv_edu_es/EfmRroYGSPhOtvNcAROT5eYBiVcAsw309bZmy-JKQIrfoA?e=wI1ZfB .
 
-1 On linux terminal with a Docker installed execute tomsik68/xampp:5  to dowload Docker image.
+1 On linux terminal with a Docker installed execute "docker pull tomsik68/xampp:5"  to dowload Docker image.
 
 2 Run docker service with "docker run --name myXampp -p 41061:22 -p 41062:80 -d -v /directory/gitHIstocolAirepo_fodler/:/opt/lampp/htdocs tomsik68/xampp:5".
 
