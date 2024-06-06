@@ -32,7 +32,7 @@ Steps to deploy in the local host the HistoColAi tool:
 
 Enjoy.
 
-#Linux deployment
+# Linux deployment with Docker
 
 1 Download repo and go to the folder /image/ and unzip "batch_spitzoid_proof" wich can be dowload from https://upvedues-my.sharepoint.com/:u:/g/personal/cripulos_upv_edu_es/EfmRroYGSPhOtvNcAROT5eYBiVcAsw309bZmy-JKQIrfoA?e=wI1ZfB .
 
