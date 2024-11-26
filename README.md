@@ -46,9 +46,11 @@ Enjoy.
 
 4 Import Data Base  executing "mysql -u root --password='' < /opt/lampp/htdocs/DataBase/histocolai.sql".
 
-5 Access by the url http://ServeIP:41062/HistoColAi/histocolai.html?source=images/batch_spitzoid_proof/dzi_images.json# .
+5 Access by the url http://ServeIP:41062/HistoColAi/histocolai.html?source=images/batch_spitzoid_proof/dzi_images.json#.
 
-6 In case to want to access to the databe http://ServeIP:41062/phpmyadmin/.
+6 In the case that you want to use the app on the same computer where you deploy it, you can use http://localhost:41062/HistoColAi/histocolai.html?source=images/batch_spitzoid_proof/dzi_images.json# to access.
+
+7 In case to want to access to the databe http://ServeIP:41062/phpmyadmin/.
 
 
 
