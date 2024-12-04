@@ -1,18 +1,18 @@
 Steps for Conversion:
 
-    Install Requirements
-    Before running the conversion script, you need to install the required dependencies. To do this, navigate to the folder using:
+Install Requirements
+Before running the conversion script, you need to install the required dependencies. To do this, navigate to the folder using:
 
-cd folder/HistcolAi/openslide
+    cd folder/HistcolAi/openslide
 
 Then, run the following command to install the requirements:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 Run the Conversion Script
 After installing the requirements, run the conversion script with:
 
-python converter.py
+    python converter.py
 
 Provide Batch Name
 Once the script starts, you will be prompted with the following text in the terminal:
