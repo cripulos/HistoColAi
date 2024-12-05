@@ -12,7 +12,7 @@ Then, run the following command to install the requirements:
 ### 2 Run the Conversion Script
 After installing the requirements, run the conversion script with:
 
-    python converter.py
+    python converter_all.py
 
 ### 3 Provide Batch Name
 Once the script starts, you will be prompted with the following text in the terminal:
